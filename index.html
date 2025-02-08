@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Rosaura Centurión</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header>
@@ -14,9 +14,9 @@
                 <ul>
                     <li><a href="#about">Sobre mí</a></li>
                     <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#certifications">Certificaciones</a></li>
                     <li><a href="#skills">Habilidades</a></li>
                     <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#certifications">Certificaciones</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,7 +26,7 @@
         <div class="container">
             <h2>Sobre mí</h2>
             <div class="profile">
-                <img src="foto.jpeg" alt="Foto de Rosaura Centurión">
+                <img src="images/foto.jpeg" alt="Foto de Rosaura Centurión">
                 <p>Reciente egresada de programas técnicos en desarrollo web, con conocimientos en HTML, CSS, JavaScript y Python, además de formación en contabilidad y manejo avanzado de herramientas ofimáticas. Altamente motivada, con rápida capacidad de aprendizaje, habilidades analíticas destacadas (IQ 130) y un enfoque orientado a resultados. Busco una oportunidad para iniciar mi carrera profesional y aportar valor desde el primer día.</p>
             </div>
         </div>
@@ -57,23 +57,25 @@
     </section>
 
     <section id="certifications">
-        <div class="container" id="c">
+        <div class="container">
             <h2>Certificaciones</h2>
-            <div class="certification">
-                <img src="certificacion1.jpg" alt="Certificación en Desarrollo Web - Sololearn" class="c">
-                <p>Certificación en Desarrollo Web - Sololearn</p>
-            </div>
-            <div class="certification">
-                <img src="certificacion2.jpg" alt="Certifición en Ingeniero Web en Phython - Bootcamp Desarrollo Joven" class="c">
-                <p>Certifición en Ingeniero Web en Phython - Bootcamp Desarrollo Joven</p>
-            </div>
-            <div class="certification">
-                <img src="certificacion3.jpg" alt="Certificación en HTML - Sololearn" class="c">
-                <p>Certificación en HTML - Sololearn</p>
+            <div class="certifications-grid">
+                <div class="certification">
+                    <img src="images/certificacion1.jpg" alt="Certificación en Desarrollo Web - Sololearn" class="certificado">
+                    <p>Certificación en Desarrollo Web - Sololearn</p>
+                </div>
+                <div class="certification">
+                    <img src="images/certificacion2.jpg" alt="Certifición en Ingeniero Web en Phython - Bootcamp Desarrollo Joven" class="certificado">
+                    <p>Certifición en Ingeniero Web en Phython - Bootcamp Desarrollo Joven</p>
+                </div>
+                <div class="certification">
+                    <img src="images/certificacion3.jpg" alt="Certificación en HTML - Sololearn" class="certificado">
+                    <p>Certificación en HTML - Sololearn</p>
+                </div>
             </div>
         </div>
     </section>
-    
+
     <section id="skills">
         <div class="container">
             <h2>Habilidades</h2>
@@ -92,7 +94,7 @@
     <section id="contact">
         <div class="container">
             <h2>Contacto</h2>
-            <p>Correo: <a href="mailto:rouscenturin@gmail.com">rousscenturin@gmail.com</a></p>
+            <p>Correo: <a href="mailto:rousscenturin@gmail.com">rousscenturin@gmail.com</a></p>
             <p>Teléfono (WhatsApp y Telegram): <a href="tel:+595983549557">0983549557</a></p>
         </div>
     </section>
@@ -102,5 +104,28 @@
             <p>&copy; 2025 Rosaura Centurión</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript para expandir la imagen al hacer clic
+        document.querySelectorAll('.certificado').forEach(item => {
+            item.addEventListener('click', event => {
+                const imgSrc = event.target.src;
+                const modal = document.createElement('div');
+                modal.classList.add('modal');
+                modal.innerHTML = `<div class="modal-content"><span class="close">&times;</span><img src="${imgSrc}" alt="Imagen ampliada"></div>`;
+                document.body.appendChild(modal);
+
+                // Para cerrar el modal
+                modal.querySelector('.close').addEventListener('click', () => {
+                    modal.remove();
+                });
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.remove();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
