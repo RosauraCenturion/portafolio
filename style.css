@@ -88,6 +88,10 @@ h2 {
     height: 150px;
 }
 
+.profile-text {
+    flex: 1;
+}
+
 .project {
     background: #f4f4f4;
     margin-bottom: 1rem;
