@@ -145,6 +145,10 @@ footer p {
     border-left: 5px solid #333;
 }
 
-#certifications img {
-    wigth: 100%
+.certification img {
+    wigth: 25%;
+}
+
+#certifications {
+    display: flex;
 }
