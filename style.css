@@ -252,3 +252,10 @@ footer p {
         max-width: 100%;
     }
 }
+
+/* Media Queries para dispositivos de escritorio */
+@media (min-width: 769px) {
+    .profile {
+        flex-direction: row;
+    }
+}
