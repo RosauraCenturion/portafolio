@@ -1,4 +1,4 @@
-/* styles.css */
+/* estilos.css */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -133,22 +133,74 @@ footer p {
     margin: 0;
 }
 
-#certifications ul {
-    list-style: none;
-    padding: 0;
-}
-
-#certifications ul li {
-    background: #f4f4f4;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-left: 5px solid #333;
-}
-
-.c {
-    weight: 25%;
-}
-
-#c {
+.certifications-grid {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.certification {
+    text-align: center;
+    margin-bottom: 1rem;
+    flex: 1 1 calc(33.333% - 1rem);
+    box-sizing: border-box;
+}
+
+.certification img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.certification img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    padding: 1rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
