@@ -24,6 +24,7 @@ header .container {
 
 header h1 {
     font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
 }
 
 nav ul {
@@ -261,5 +262,9 @@ footer p {
 @media (min-width: 769px) {
     .profile {
         flex-direction: row;
+    }
+
+    .profile-text {
+        text-align: left;
     }
 }
