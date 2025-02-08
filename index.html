@@ -1,206 +1,131 @@
-/* estilos.css */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Rosaura Centurión</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rosaura Centurión</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#certifications">Certificaciones</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-}
+    <section id="about">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <div class="profile">
+                <img src="images/foto.jpeg" alt="Foto de Rosaura Centurión">
+                <p>Reciente egresada de programas técnicos en desarrollo web, con conocimientos en HTML, CSS, JavaScript y Python, además de formación en contabilidad y manejo avanzado de herramientas ofimáticas. Altamente motivada, con rápida capacidad de aprendizaje, habilidades analíticas destacadas (IQ 130) y un enfoque orientado a resultados. Busco una oportunidad para iniciar mi carrera profesional y aportar valor desde el primer día.</p>
+            </div>
+        </div>
+    </section>
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
+    <section id="projects">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h3>Formulario de Confirmación de Correo</h3>
+                <p>Desarrollé un formulario para un sitio web que valida la coincidencia entre el correo electrónico y su confirmación en tiempo real, mejorando la experiencia del usuario y reduciendo errores comunes en el registro.</p>
+                <a href="https://rosauracenturion.github.io/cofee-form/" target="_blank">Ver Proyecto</a>
+                <a href="https://github.com/RosauraCenturion/cofee-form" target="_blank">Ver Código en GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Carrito de Compras con Cálculo de Envío</h3>
+                <p>Implementé un sistema de carrito de compras que calcula automáticamente el costo de envío basado en los artículos seleccionados. Incluye una alerta que informa al usuario del costo total, optimizando el proceso de compra.</p>
+                <a href="https://rosauracenturion.github.io/Tarea-de-precios-de-cafecitos/" target="_blank">Ver Proyecto</a>
+                <a href="https://github.com/RosauraCenturion/Tarea-de-precios-de-cafecitos/" target="_blank">Ver Código en GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Menú de Inicio y Productos</h3>
+                <p>Desarrollé un menú interactivo para una aplicación web que permite a los usuarios navegar fácilmente entre el menú de inicio y el menú de productos, mejorando la usabilidad y la navegación del sitio.</p>
+                <a href="https://rosauracenturion.github.io/menu-de-dic-cafe/" target="_blank">Ver Proyecto</a>
+                <a href="https://github.com/RosauraCenturion/menu-de-dic-cafe" target="_blank">Ver Código en GitHub</a>
+            </div>
+        </div>
+    </section>
 
-header h1 {
-    font-size: 2.5rem;
-}
+    <section id="certifications">
+        <div class="container">
+            <h2>Certificaciones</h2>
+            <div class="certifications-grid">
+                <div class="certification">
+                    <img src="images/certificacion1.jpg" alt="Certificación en Desarrollo Web - Sololearn" class="certificado">
+                    <p>Certificación en Desarrollo Web - Sololearn</p>
+                </div>
+                <div class="certification">
+                    <img src="images/certificacion2.jpg" alt="Certifición en Ingeniero Web en Phython - Bootcamp Desarrollo Joven" class="certificado">
+                    <p>Certifición en Ingeniero Web en Phython - Bootcamp Desarrollo Joven</p>
+                </div>
+                <div class="certification">
+                    <img src="images/certificacion3.jpg" alt="Certificación en HTML - Sololearn" class="certificado">
+                    <p>Certificación en HTML - Sololearn</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
+    <section id="skills">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>GitHub</li>
+                <li>VSCode</li>
+            </ul>
+        </div>
+    </section>
 
-nav ul li {
-    margin-left: 2rem;
-}
+    <section id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Correo: <a href="mailto:rousscenturin@gmail.com">rousscenturin@gmail.com</a></p>
+            <p>Teléfono (WhatsApp y Telegram): <a href="tel:+595983549557">0983549557</a></p>
+        </div>
+    </section>
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    background-color: #444;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rosaura Centurión</p>
+        </div>
+    </footer>
 
-nav ul li a:hover {
-    background-color: #555;
-}
+    <script>
+        // JavaScript para expandir la imagen al hacer clic
+        document.querySelectorAll('.certificado').forEach(item => {
+            item.addEventListener('click', event => {
+                const imgSrc = event.target.src;
+                const modal = document.createElement('div');
+                modal.classList.add('modal');
+                modal.innerHTML = `<div class="modal-content"><span class="close">&times;</span><img src="${imgSrc}" alt="Imagen ampliada"></div>`;
+                document.body.appendChild(modal);
 
-section {
-    padding: 2rem 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-}
-
-.profile img {
-    border-radius: 50%;
-    margin-right: 2rem;
-    width: 150px;
-    height: 150px;
-}
-
-.project {
-    background: #f4f4f4;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-left: 5px solid #333;
-}
-
-.project h3 {
-    margin-top: 0;
-}
-
-.project p {
-    margin-bottom: 0.5rem;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #333;
-    text-decoration: none;
-    border: 1px solid #333;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.project a:hover {
-    background: #333;
-    color: #fff;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background: #f4f4f4;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    border-left: 5px solid #333;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-.certifications-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.certification {
-    text-align: center;
-    margin-bottom: 1rem;
-    flex: 1 1 calc(33.333% - 1rem);
-    box-sizing: border-box;
-}
-
-.certification img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.certification img:hover {
-    transform: scale(1.05);
-}
-
-/* Modal styles */
-.modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    padding: 1rem;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-}
-
-.modal-content img {
-    width: 100%;
-    height: auto;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+                // Para cerrar el modal
+                modal.querySelector('.close').addEventListener('click', () => {
+                    modal.remove();
+                });
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.remove();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
