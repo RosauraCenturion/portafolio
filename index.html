@@ -129,11 +129,15 @@
         <img src="dragon.gif" alt="Dragon Volador">
     </div>
     <div class="accessibility-panel">
-        <button onclick="increaseFontSize()">Aumentar tamaño de texto</button>
-        <button onclick="decreaseFontSize()">Disminuir tamaño de texto</button>
-        <button onclick="toggleContrast()">Cambiar contraste</button>
-        <button onclick="toggleDarkMode()">Modo oscuro</button>
+        <button onclick="togglePanel()" id="toggle-panel-button">Accesibilidad</button>
+        <div id="panel-content" style="display: none;">
+            <button onclick="increaseFontSize()">Aumentar tamaño de texto</button>
+            <button onclick="decreaseFontSize()">Disminuir tamaño de texto</button>
+            <button onclick="toggleContrast()">Cambiar contraste</button>
+            <button onclick="toggleDarkMode()">Modo oscuro</button>
+        </div>
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
