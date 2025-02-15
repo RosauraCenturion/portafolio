@@ -240,6 +240,18 @@ footer p {
     color: #bb86fc;
 }
 
+.dark-mode .project,
+.dark-mode ul li {
+    background: #333;
+    color: #e0e0e0;
+    border-left-color: #bb86fc;
+}
+
+.dark-mode .project a,
+.dark-mode ul li {
+    color: #bb86fc;
+}
+
 /* Estilos de la barra de lectura */
 .reading-bar {
     position: fixed;
@@ -344,4 +356,7 @@ footer p {
         flex-direction: row;
     }
 
-    .profile-text
+    .profile-text {
+        text-align: left;
+    }
+}
