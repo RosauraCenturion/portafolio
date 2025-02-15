@@ -133,7 +133,7 @@
         <div id="panel-content" style="display: none;">
             <button onclick="increaseFontSize()">Aumentar tamaño de texto</button>
             <button onclick="decreaseFontSize()">Disminuir tamaño de texto</button>
-            <button onclick="toggleContrast()">Cambiar contraste</button>
+            <button onclick="toggleReadingBar()">Barra de lectura</button>
             <button onclick="toggleDarkMode()">Modo oscuro</button>
         </div>
     </div>
@@ -173,10 +173,6 @@
             document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) - 2) + 'px';
         }
 
-        function toggleContrast() {
-            document.body.classList.toggle('high-contrast');
-        }
-
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
@@ -188,6 +184,22 @@
             } else {
                 panelContent.style.display = 'none';
             }
+        }
+
+        function toggleReadingBar() {
+            const readingBar = document.getElementById('reading-bar');
+            if (readingBar.style.display === 'none') {
+                readingBar.style.display = 'block';
+                document.addEventListener('mousemove', moveReadingBar);
+            } else {
+                readingBar.style.display = 'none';
+                document.removeEventListener('mousemove', moveReadingBar);
+            }
+        }
+
+        function moveReadingBar(event) {
+            const readingBar = document.getElementById('reading-bar');
+            readingBar.style.top = event.clientY + 'px';
         }
     </script>
 </body>
