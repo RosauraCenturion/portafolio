@@ -177,7 +177,7 @@ footer p {
     left: -10%;
     width: 100px;
     z-index: 999;
-    animation: fly 20s linear infinite;
+    animation: fly 30s linear infinite;
 }
 
 @keyframes fly {
@@ -208,13 +208,13 @@ footer p {
 .accessibility-panel button {
     display: block;
     margin-bottom: 5px;
-    padding: 5px 10px;
+    padding: 1%;
     background: #444;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 0,5;
+
 }
 
 .accessibility-panel button:hover {
