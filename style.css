@@ -241,6 +241,17 @@ footer p {
     color: #bb86fc;
 }
 
+/* Estilos de la barra de lectura */
+.reading-bar {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    background: rgba(255, 255, 0, 0.5); /* Color amarillo semitransparente */
+    z-index: 9999;
+}
+
+
 /* Modal styles */
 .modal {
     display: flex;
