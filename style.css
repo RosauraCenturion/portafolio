@@ -200,9 +200,10 @@ footer p {
     top: 10px;
     right: 10px;
     background: #fff;
-    padding: 10px;
-    border: 1px solid #333;
+    padding: 1px;
+    border: 3px solid #333;
     z-index: 1000;
+    font-size: 0.1px;
 }
 
 .accessibility-panel button {
