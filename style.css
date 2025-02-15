@@ -217,8 +217,6 @@ footer p {
     border-radius: 5px;
 }
 
-
-
 .accessibility-panel button:hover {
     background: #555;
 }
@@ -235,7 +233,7 @@ footer p {
 
 /* Estilos de modo oscuro */
 .dark-mode h2 {
-    color: #6d5986;
+    color: #bb86fc;
 }
 .dark-mode {
     background: #121212;
@@ -254,7 +252,7 @@ footer p {
 }
 
 .dark-mode .project a,
-.dark-mode ul li {
+.dark-mode ul li a {
     color: #bb86fc;
 }
 
