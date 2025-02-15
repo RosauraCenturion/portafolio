@@ -214,6 +214,7 @@ footer p {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 0,5;
 }
 
 .accessibility-panel button:hover {
