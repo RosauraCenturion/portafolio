@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Rosaura Centurión</title>
@@ -77,7 +76,6 @@
                     <img src="certificacion3.jpg" alt="Certificación en HTML - Sololearn" class="certificado">
                     <p>Certificación en HTML - Sololearn</p>
                 </div>
-    
                 <div class="certification">
                     <img src="certification4.jpg" alt="Certificación en HTML - Mimo" class="certificado">
                     <p>Certificación en HTML - Mimo</p>
@@ -114,7 +112,7 @@
     </section>
 
     <section id="contact" data-aos="fade-up">
-        <div class="container"> 
+        <div class="container">
             <h2>Contacto</h2>
             <p>Correo: <a href="mailto:rouscenturin@gmail.com">rouscenturin@gmail.com</a></p>
             <p>Teléfono (WhatsApp y Telegram): <a href="tel:+595983549557">0983549557</a></p>
@@ -126,12 +124,17 @@
             <p>&copy; 2025 Rosaura Centurión</p>
         </div>
     </footer>
+
+    <div class="dragon">
+        <img src="dragon.png" alt="Dragon Volador">
+    </div>
+
     <div class="accessibility-panel">
         <button onclick="increaseFontSize()">Aumentar tamaño de texto</button>
         <button onclick="decreaseFontSize()">Disminuir tamaño de texto</button>
         <button onclick="toggleContrast()">Cambiar contraste</button>
         <button onclick="toggleDarkMode()">Modo oscuro</button>
-     </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -157,6 +160,23 @@
                 });
             });
         });
+
+        // Funciones de accesibilidad
+        function increaseFontSize() {
+            document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) + 2) + 'px';
+        }
+
+        function decreaseFontSize() {
+            document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) - 2) + 'px';
+        }
+
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
 </body>
 </html>
