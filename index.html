@@ -180,6 +180,15 @@
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
         }
+
+        function togglePanel() {
+            const panelContent = document.getElementById('panel-content');
+            if (panelContent.style.display === 'none') {
+                panelContent.style.display = 'block';
+            } else {
+                panelContent.style.display = 'none';
+            }
+        }
     </script>
 </body>
 </html>
