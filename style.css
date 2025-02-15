@@ -245,10 +245,10 @@ footer p {
     position: fixed;
     left: 0;
     width: 100%;
-    height: 5%; 
-    background: rgba(255, 255, 0, 0.2); /* Color amarillo semitransparente */
+    height: 30px; /* Ajusta la altura según tus necesidades */
+    background: rgba(255, 255, 0, 0.5); /* Color amarillo semitransparente */
     z-index: 9999;
-    border: solid;
+    pointer-events: none; /* Asegura que no bloquee las interacciones */
 }
 
 /* Modal styles */
@@ -344,7 +344,4 @@ footer p {
         flex-direction: row;
     }
 
-    .profile-text {
-        text-align: left;
-    }
-}
+    .profile-text
