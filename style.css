@@ -207,8 +207,8 @@ footer p {
 
 .accessibility-panel button {
     display: block;
-    margin-bottom: 5px;
-    padding: 0.1%;
+    margin-bottom: 0.2%;
+    padding: 1%;
     background: #444;
     color: #fff;
     border: none;
