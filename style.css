@@ -1,4 +1,4 @@
-/* estilos.css */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -267,4 +267,49 @@ footer p {
     .profile-text {
         text-align: left;
     }
+}
+/* Estilos del panel de accesibilidad */
+.accessibility-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #333;
+    z-index: 1000;
+}
+
+.accessibility-panel button {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.accessibility-panel button:hover {
+    background: #555;
+}
+
+/* Estilos de alto contraste */
+.high-contrast {
+    background: #000;
+    color: #fff;
+}
+
+.high-contrast a {
+    color: #0ff;
+}
+
+/* Estilos de modo oscuro */
+.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode a {
+    color: #bb86fc;
 }
