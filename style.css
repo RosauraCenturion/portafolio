@@ -234,6 +234,9 @@ footer p {
 }
 
 /* Estilos de modo oscuro */
+.dark-mode h2 {
+    color: #6d5986;
+}
 .dark-mode {
     background: #121212;
     color: #e0e0e0;
