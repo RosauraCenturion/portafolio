@@ -6,10 +6,10 @@ body {
   line-height: 1.6;
 }
 
-.legible-font {
-  font-family: 'Verdana', sans-serif;
-  letter-spacing: 0.5px;
-  line-height: 1.8;
+.legible-font * {
+  font-family: 'Verdana', sans-serif !important;
+  letter-spacing: 0.5px !important;
+  line-height: 1.8 !important;
 }
 
 header {
