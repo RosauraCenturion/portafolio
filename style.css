@@ -5,7 +5,13 @@ body {
   color: #333;
   line-height: 1.6;
 }
+#page-content.dimmed {
+  filter: brightness(0.5);
+}
 
+#reading-bar {
+  filter: none !important;
+}
 body.reading-active {
   filter: brightness(5);
 }
