@@ -190,23 +190,23 @@
       panelContent.style.display = (panelContent.style.display === 'none') ? 'block' : 'none';
     }
     function toggleReadingBar() {
-      const readingBar = document.getElementById('reading-bar');
-      const overlay = document.getElementById('dimming-overlay');
-      if (readingBar.style.display === 'none') {
-        readingBar.style.display = 'block';
-        overlay.style.display = 'block';
-        document.addEventListener('mousemove', moveReadingBar);
-      } else {
-        readingBar.style.display = 'none';
-        overlay.style.display = 'none';
-        document.removeEventListener('mousemove', moveReadingBar);
-      }
-    }
-    function moveReadingBar(event) {
-      const readingBar = document.getElementById('reading-bar');
-      readingBar.style.top = event.clientY + 'px';
-      readingBar.style.pointerEvents = 'none'
-    }
+  const readingBar = document.getElementById('reading-bar');
+  const overlay = document.getElementById('dimming-overlay');
+  if (readingBar.style.display === 'none' || readingBar.style.display === '') {
+    readingBar.style.display = 'block';
+    overlay.style.display = 'block';
+    document.addEventListener('mousemove', moveReadingBar);
+  } else {
+    readingBar.style.display = 'none';
+    overlay.style.display = 'none';
+    document.removeEventListener('mousemove', moveReadingBar);
+  }
+}
+function moveReadingBar(event) {
+  const readingBar = document.getElementById('reading-bar');
+  readingBar.style.top = event.clientY + 'px';
+}
+
     
     function toggleAnimations() {
       const elements = document.querySelectorAll('*');
