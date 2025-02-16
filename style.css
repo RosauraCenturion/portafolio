@@ -38,7 +38,7 @@ body {
   z-index: 9999;
   pointer-events: none;  /* No captura clicks, permite interactuar con elementos debajo */
   border: 1px solid #000;
-  filter: brightness(1) !important; /* Fuerza que tenga brillo normal */
+  filter: brightness(2) !important; /* Fuerza que tenga brillo normal */
 }
 
 
