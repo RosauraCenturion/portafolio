@@ -188,15 +188,17 @@
       panelContent.style.display = (panelContent.style.display === 'none') ? 'block' : 'none';
     }
     function toggleReadingBar() {
-      const readingBar = document.getElementById('reading-bar');
-      if (readingBar.style.display === 'none') {
-        readingBar.style.display = 'block';
-        document.addEventListener('mousemove', moveReadingBar);
-      } else {
-        readingBar.style.display = 'none';
-        document.removeEventListener('mousemove', moveReadingBar);
-      }
+    const readingBar = document.getElementById('reading-bar');
+    if (readingBar.style.display === 'none') {
+      readingBar.style.display = 'block';
+      document.body.classList.add('reading-active');
+      document.addEventListener('mousemove', moveReadingBar);
+    } else {
+      readingBar.style.display = 'none';
+      document.body.classList.remove('reading-active');
+      document.removeEventListener('mousemove', moveReadingBar);
     }
+  }
     function moveReadingBar(event) {
       const readingBar = document.getElementById('reading-bar');
       readingBar.style.top = event.clientY + 'px';
