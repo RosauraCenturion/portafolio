@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="page-content">
+  <div id="page-content" style="position: relative; z-index: 1;">
   <header>
     <div class="container">
       <h1 data-aos="fade-down">Rosaura Centurión</h1>
@@ -205,7 +205,7 @@
     function moveReadingBar(event) {
       const readingBar = document.getElementById('reading-bar');
       readingBar.style.top = event.clientY + 'px';
-      readingBar.style.pointerEvents = 'none';
+      readingBar.style.pointerEvents = 'none'
     }
     
     function toggleAnimations() {
