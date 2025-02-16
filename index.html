@@ -148,6 +148,8 @@
     </div>
   </div>
 </div>
+  <div id="dimming-overlay-top" style="display: none;"></div>
+<div id="dimming-overlay-bottom" style="display: none;"></div>
 <div id="dimming-overlay" style="display: none;"></div>
   <div id="reading-bar" class="reading-bar" style="display: none;"></div>
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
@@ -195,17 +197,43 @@
 
 function toggleReadingBar() {
   const bar = document.getElementById('reading-bar');
+  const overlayTop = document.getElementById('dimming-overlay-top');
+  const overlayBottom = document.getElementById('dimming-overlay-bottom');
+  
   if (!readingBarActive) {
-    // Activar la barra: la mostramos y añadimos el listener para moverla
+    // Activamos la barra y los overlays
     bar.style.display = 'block';
-    document.addEventListener('mousemove', moveReadingBar);
+    overlayTop.style.display = 'block';
+    overlayBottom.style.display = 'block';
+    document.addEventListener('mousemove', updateReadingBarAndOverlays);
     readingBarActive = true;
   } else {
-    // Desactivar la barra: la ocultamos y quitamos el listener
+    // Desactivamos
     bar.style.display = 'none';
-    document.removeEventListener('mousemove', moveReadingBar);
+    overlayTop.style.display = 'none';
+    overlayBottom.style.display = 'none';
+    document.removeEventListener('mousemove', updateReadingBarAndOverlays);
     readingBarActive = false;
   }
+}
+
+function updateReadingBarAndOverlays(event) {
+  const bar = document.getElementById('reading-bar');
+  const overlayTop = document.getElementById('dimming-overlay-top');
+  const overlayBottom = document.getElementById('dimming-overlay-bottom');
+  
+  const barHeight = 40; // Debe coincidir con la altura definida en CSS
+  const barTop = event.clientY;
+  
+  // Actualizamos la posición de la barra de lectura
+  bar.style.top = barTop + 'px';
+  
+  // El overlay superior cubrirá desde el tope de la ventana hasta el inicio de la barra
+  overlayTop.style.height = barTop + 'px';
+  
+  // El overlay inferior cubrirá desde el final de la barra hasta el fondo de la ventana
+  overlayBottom.style.top = (barTop + barHeight) + 'px';
+  overlayBottom.style.height = `calc(100% - ${barTop + barHeight}px)`;
 }
 
 function moveReadingBar(event) {
