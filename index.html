@@ -161,46 +161,44 @@
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    let readingBarHeight = 20;
-    let readingBarActive = false;
-    AOS.init();
+let readingBarHeight = 20;
+let readingBarActive = false;
+AOS.init();
 
-    // Modal para ampliar imágenes de certificaciones
-    document.querySelectorAll('.certificado').forEach(item => {
-      item.addEventListener('click', event => {
-        const imgSrc = event.target.src;
-        const modal = document.createElement('div');
-        modal.classList.add('modal');
-        modal.innerHTML = `<div class="modal-content"><span class="close">&times;</span><img src="${imgSrc}" alt="Imagen ampliada"></div>`;
-        document.body.appendChild(modal);
+// Modal para ampliar imágenes de certificaciones
+document.querySelectorAll('.certificado').forEach(item => {
+  item.addEventListener('click', event => {
+    const imgSrc = event.target.src;
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `<div class="modal-content"><span class="close">&times;</span><img src="${imgSrc}" alt="Imagen ampliada"></div>`;
+    document.body.appendChild(modal);
 
-        modal.querySelector('.close').addEventListener('click', () => {
-          modal.remove();
-        });
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.remove();
-          }
-        });
-      });
+    modal.querySelector('.close').addEventListener('click', () => {
+      modal.remove();
     });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
+  });
+});
 
-    // Funciones de accesibilidad existentes
-    function increaseFontSize() {
-      document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) + 2) + 'px';
-    }
-    function decreaseFontSize() {
-      document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) - 2) + 'px';
-    }
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-    function togglePanel() {
-      const panelContent = document.getElementById('panel-content');
-      panelContent.style.display = (panelContent.style.display === 'none') ? 'block' : 'none';
-    }
-    // Variable global para controlar el estado de la barra de lectura
-
+// Funciones de accesibilidad existentes
+function increaseFontSize() {
+  document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) + 2) + 'px';
+}
+function decreaseFontSize() {
+  document.body.style.fontSize = (parseInt(getComputedStyle(document.body).fontSize) - 2) + 'px';
+}
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+function togglePanel() {
+  const panelContent = document.getElementById('panel-content');
+  panelContent.style.display = (panelContent.style.display === 'none') ? 'block' : 'none';
+}
 
 function toggleReadingBar() {
   const bar = document.getElementById('reading-bar');
@@ -242,7 +240,8 @@ function updateReadingBarAndOverlays(event) {
   overlayBottom.style.top = (barTop + barHeight) + 'px';
   overlayBottom.style.height = `calc(100% - ${barTop + barHeight}px)`;
 }
- function toggleReadingHeight() {
+
+function toggleReadingHeight() {
   const container = document.getElementById('reading-height-container');
   container.style.display = container.style.display === 'none' ? 'block' : 'none';
 }   
@@ -252,41 +251,30 @@ function adjustReadingBarHeight(value) {
   if (bar) {
     bar.style.height = readingBarHeight + 'px';
   }
-  }
-function moveReadingBar(event) {
-  const bar = document.getElementById('reading-bar');
-  if (bar) {
-    // Actualizamos la posición vertical de la barra según el cursor
-    bar.style.top = event.clientY + 'px';
-  }
 }
 
+function toggleAnimations() {
+  const elements = document.querySelectorAll('*');
+  elements.forEach(element => {
+    element.style.animation = 'none';
+    element.style.transition = 'none';
+  });
+  const dragon = document.querySelector('.dragon');
+  if (dragon) {
+    dragon.style.display = 'none';
+  }
+}
+function adjustSaturation(value) {
+  document.body.style.filter = `saturate(${value}%)`;
+}
+function toggleSaturation() {
+  const saturationContainer = document.getElementById('saturation-container');
+  saturationContainer.style.display = (saturationContainer.style.display === 'none') ? 'block' : 'none';
+}
+function toggleLegibleFonts() {
+  document.body.classList.toggle('legible-font');
+}
 
-    
-    function toggleAnimations() {
-      const elements = document.querySelectorAll('*');
-      elements.forEach(element => {
-        element.style.animation = 'none';
-        element.style.transition = 'none';
-      });
-      const dragon = document.querySelector('.dragon');
-      if (dragon) {
-        dragon.style.display = 'none';
-      }
-    }
-    // Función para ajustar la saturación de la página
-    function adjustSaturation(value) {
-      document.body.style.filter = `saturate(${value}%)`;
-    }
-    // Mostrar u ocultar el control de saturación
-    function toggleSaturation() {
-      const saturationContainer = document.getElementById('saturation-container');
-      saturationContainer.style.display = (saturationContainer.style.display === 'none') ? 'block' : 'none';
-    }
-    // Función para alternar fuentes legibles
-    function toggleLegibleFonts() {
-      document.body.classList.toggle('legible-font');
-    }
   </script>
 </body>
 </html>
