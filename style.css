@@ -33,7 +33,7 @@ body {
   left: 0;
   width: 100%;
   height: 20px; /* O el alto que prefieras */
-  background: rgba(255, 255, 0, 0.1);
+  background: rgba(247, 240, 225, 0.1);
   z-index: 9999;
   pointer-events: none;
   border: solid;
