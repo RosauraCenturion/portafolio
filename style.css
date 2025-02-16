@@ -33,7 +33,7 @@ body {
   left: 0;
   width: 100%;
   height: 20px; /* Puedes ajustar el alto según lo necesites */
-  background: rgba(255, 255, 0, 1); /* Fondo amarillo opaco */
+  background: rgba(255, 255, 0, 0.1); /* Fondo amarillo opaco */
   z-index: 9999;
   pointer-events: none;
   border: solid;
