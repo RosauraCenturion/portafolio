@@ -153,6 +153,7 @@
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    let readingBarActive = false;
     AOS.init();
 
     // Modal para ampliar imágenes de certificaciones
@@ -189,24 +190,32 @@
       const panelContent = document.getElementById('panel-content');
       panelContent.style.display = (panelContent.style.display === 'none') ? 'block' : 'none';
     }
-    let readingBarActive = false;
+    // Variable global para controlar el estado de la barra de lectura
+
 
 function toggleReadingBar() {
   const bar = document.getElementById('reading-bar');
-  if (!bar) {
-    const newBar = document.createElement('div');
-    newBar.id = 'reading-bar';
-    document.body.appendChild(newBar);
+  if (!readingBarActive) {
+    // Activar la barra: la mostramos y añadimos el listener para moverla
+    bar.style.display = 'block';
+    document.addEventListener('mousemove', moveReadingBar);
+    readingBarActive = true;
   } else {
-    bar.remove();
+    // Desactivar la barra: la ocultamos y quitamos el listener
+    bar.style.display = 'none';
+    document.removeEventListener('mousemove', moveReadingBar);
+    readingBarActive = false;
   }
 }
 
-
 function moveReadingBar(event) {
-  const readingBar = document.getElementById('reading-bar');
-  readingBar.style.top = event.clientY + 'px';
+  const bar = document.getElementById('reading-bar');
+  if (bar) {
+    // Actualizamos la posición vertical de la barra según el cursor
+    bar.style.top = event.clientY + 'px';
+  }
 }
+
 
     
     function toggleAnimations() {
