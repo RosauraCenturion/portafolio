@@ -40,7 +40,7 @@ body {
   z-index: 10000; 
   pointer-events: none;
 
-  filter: none !important;
+  /*filter: none !important;*/
   border: solid, 2px; red;
 }
 
