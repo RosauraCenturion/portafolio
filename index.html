@@ -240,7 +240,13 @@ function updateReadingBarAndOverlays(event) {
   overlayBottom.style.top = (barTop + barHeight) + 'px';
   overlayBottom.style.height = `calc(100% - ${barTop + barHeight}px)`;
 }
-
+function adjustReadingBarHeight(value) {
+  readingBarHeight = parseInt(value);
+  const bar = document.getElementById('reading-bar');
+  if (bar) {
+    bar.style.height = readingBarHeight + 'px';
+  }
+  }
 function moveReadingBar(event) {
   const bar = document.getElementById('reading-bar');
   if (bar) {
