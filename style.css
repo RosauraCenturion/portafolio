@@ -15,7 +15,7 @@ body {
   left: 0;
   width: 100%;
   height: 20px; /* Ajusta el alto según prefieras */
-  background: rgba(250, 245, 230, 0.01); /* Fondo con 80% de opacidad */
+  background: rgba(250, 245, 230, 0.1); /* Fondo con 80% de opacidad */
   z-index: 9999;
   pointer-events: none;
   border: 1px solid #000;
