@@ -136,7 +136,11 @@
     <div id="panel-content" style="display: none;">
       <button onclick="increaseFontSize()">Aumentar tamaño de texto</button>
       <button onclick="decreaseFontSize()">Disminuir tamaño de texto</button>
+      
       <button onclick="toggleReadingBar()">Barra de lectura</button>
+      <label for="reading-height-slider">Altura de la barra:</label>
+     <input type="range" id="reading-height-slider" min="10" max="100" value="20" oninput="adjustReadingBarHeight(this.value)">
+
       <button onclick="toggleDarkMode()">Modo oscuro</button>
       <button onclick="toggleAnimations()">Detener animaciones</button>
       <button onclick="toggleSaturation()">Saturación</button>
@@ -155,6 +159,7 @@
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    let readingBarHeight = 20;
     let readingBarActive = false;
     AOS.init();
 
@@ -222,7 +227,7 @@ function updateReadingBarAndOverlays(event) {
   const overlayTop = document.getElementById('dimming-overlay-top');
   const overlayBottom = document.getElementById('dimming-overlay-bottom');
   
-  const barHeight = 20; // Debe coincidir con la altura definida en CSS para #reading-bar
+  const barHeight = readingBarHeight;
   const barTop = event.clientY;
   
   // Posición de la barra de lectura
