@@ -5,6 +5,7 @@ body {
   color: #333;
   line-height: 1.6;
 }
+
 #page-content.dimmed {
   filter: brightness(0.5);
 }
@@ -13,43 +14,24 @@ body {
   position: fixed;
   left: 0;
   width: 100%;
-  height: 20px;  /* Ajusta el alto según prefieras */
-  background: rgba(250, 245, 230, 0.8);  /* Fondo con 80% de opacidad para que se lean las letras */
+  height: 20px; /* Ajusta el alto según prefieras */
+  background: rgba(250, 245, 230, 0.8); /* Fondo con 80% de opacidad */
   z-index: 9999;
   pointer-events: none;
   border: 1px solid #000;
-  filter: none !important;  /* Aseguramos que no se aplique ningún filtro */
-}
-/*body.reading-active {
-  filter: brightness(5);
-}*/
-
-/*body.reading-active #reading-bar {
   filter: none !important;
-}*/
+}
+
 #dimming-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según lo que necesites */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 9000;
-  pointer-events: none;  /* No bloquea clicks */
+  pointer-events: none;
 }
-.reading-bar {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  height: 20px;  /* Ajusta el alto según prefieras */
-  background: rgba(250, 245, 230, 0.1);  /* Fondo amarillo opaco */
-  z-index: 9999;
-  pointer-events: none;  /* No captura clicks, permite interactuar con elementos debajo */
-  border: 1px solid #000;
-  filter: brightness(10) !important; /* Fuerza que tenga brillo normal */
-}
-
-
 
 .legible-font * {
   font-family: 'Verdana', sans-serif !important;
@@ -221,7 +203,6 @@ footer p {
   transform: scale(1.05);
 }
 
-/* Animación del dragón */
 .dragon {
   position: fixed;
   bottom: 10%;
@@ -245,7 +226,6 @@ footer p {
   }
 }
 
-/* Estilos del panel de accesibilidad */
 .accessibility-panel {
   position: fixed;
   top: 10px;
@@ -254,7 +234,6 @@ footer p {
   padding: 1px;
   border: 3px solid #333;
   z-index: 1000;
-  font-size: 0.1px;
 }
 
 .accessibility-panel button {
@@ -272,13 +251,11 @@ footer p {
   background: #555;
 }
 
-/* Estilos para el input range de saturación */
 .accessibility-panel input[type="range"] {
   width: 100%;
   margin-top: 5px;
 }
 
-/* Estilos de alto contraste */
 .high-contrast {
   background: #000;
   color: #fff;
@@ -288,129 +265,21 @@ footer p {
   color: #0ff;
 }
 
-/* Estilos de modo oscuro */
-.dark-mode h2 {
-  color: #bb86fc;
-}
 .dark-mode {
   background: #121212;
   color: #e0e0e0;
 }
 
-.dark-mode a {
+.dark-mode h2 {
   color: #bb86fc;
 }
 
 .dark-mode .project,
 .dark-mode ul li {
   background: #333;
-  color: #e0e0e0;
   border-left-color: #bb86fc;
 }
 
-.dark-mode .project a,
-.dark-mode ul li a {
+.dark-mode a {
   color: #bb86fc;
-}
-
-/* Estilos de la barra de lectura */
-.reading-bar {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: rgba(255, 255, 0, 0.1);
-  z-index: 9999;
-  pointer-events: none;
-  border: solid;
-}
-
-/* Modal styles */
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  padding: 1rem;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 800px;
-  text-align: center;
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul li {
-    margin: 0.5rem 0;
-  }
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
-  .profile img {
-    margin: 0 auto 1rem;
-  }
-  .certifications-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .certification {
-    flex: 1 1 100%;
-    max-width: 300px;
-  }
-  .certification img {
-    max-width: 100%;
-  }
-}
-
-/* Media Queries para dispositivos de escritorio */
-@media (min-width: 769px) {
-  .profile {
-    flex-direction: row;
-  }
-  .profile-text {
-    text-align: left;
-  }
 }
