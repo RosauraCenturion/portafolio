@@ -25,19 +25,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+  background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según lo que necesites */
   z-index: 9000;
+  pointer-events: none;  /* No bloquea clicks */
 }
-#reading-bar {
+.reading-bar {
   position: fixed;
   left: 0;
   width: 100%;
-  height: 20px; /* Puedes ajustar el alto según lo necesites */
-  background: rgba(255, 255, 0, 0.1); /* Fondo amarillo opaco */
+  height: 20px;  /* Ajusta el alto según prefieras */
+  background: rgba(255, 255, 0, 0.1);  /* Fondo amarillo opaco */
   z-index: 9999;
-  pointer-events: none;
-  border: solid;
-  filter: brightness(2) !important; /* Forzamos que tenga brillo normal */
+  pointer-events: none;  /* No captura clicks, permite interactuar con elementos debajo */
+  border: 1px solid #000;
+  filter: brightness(1) !important; /* Fuerza que tenga brillo normal */
 }
 
 
