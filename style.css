@@ -6,6 +6,15 @@ body {
   line-height: 1.6;
 }
 
+body.reading-active {
+  filter: brightness(0.5);
+}
+
+body.reading-active #reading-bar {
+  filter: none !important;
+}
+
+
 .legible-font * {
   font-family: 'Verdana', sans-serif !important;
   letter-spacing: 0.5px !important;
