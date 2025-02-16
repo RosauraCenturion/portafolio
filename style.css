@@ -41,7 +41,7 @@ body {
   pointer-events: none;
 
   filter: none !important;
-  border: solid, red;
+  border: solid, 1px; red;
 }
 
 
