@@ -10,17 +10,39 @@ body {
   filter: brightness(0.5);
 }
 
-#reading-bar {
+/* Overlays para oscurecer el fondo (excepto la zona de la barra) */
+#dimming-overlay-top,
+#dimming-overlay-bottom {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
-  height: 40px; /* Altura ajustada */
-  background: rgba(255, 255, 255, 0.1); /* Fondo claro para visibilidad */
-  z-index: 10000; /* Asegura que esté al frente */
-  mix-blend-mode: difference; /* Anula el filtro oscuro */
-  pointer-events: none; /* No interfiere con el contenido */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9000;
+  pointer-events: none;
 }
+
+#dimming-overlay-top {
+  top: 0;
+  height: 0; /* se actualizará con JS */
+}
+
+#dimming-overlay-bottom {
+  /* Se posiciona desde arriba (top) y se actualiza su altura con JS */
+}
+
+/* Barra de lectura: estará por encima de los overlays */
+#reading-bar {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Ajusta la altura deseada */
+  background: rgba(255, 255, 255, 0.2); /* Fondo con algo de transparencia para ver el texto debajo */
+  z-index: 10000; /* Mayor que los overlays */
+  pointer-events: none;
+  /* Puedes conservar mix-blend-mode si lo deseas, pero lo dejamos sin él para evitar complicaciones */
+  filter: none !important;
+}
+
 
 #dimming-overlay {
   position: fixed;
