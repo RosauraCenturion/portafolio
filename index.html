@@ -24,6 +24,7 @@
     </div>
   </header>
 
+
   <section id="about" data-aos="fade-up">
     <div class="container">
       <h2>Sobre mí</h2>
@@ -142,11 +143,12 @@
         <label for="saturation-slider">Saturación:</label>
         <input type="range" id="saturation-slider" min="0" max="200" value="100" oninput="adjustSaturation(this.value)">
       </div>
+      <button onclick="toggleLegibleFonts()">Fuentes legibles</button>
     </div>
   </div>
 
   <div id="reading-bar" class="reading-bar" style="display: none;"></div>
-<script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init();
@@ -215,10 +217,14 @@
     function adjustSaturation(value) {
       document.body.style.filter = `saturate(${value}%)`;
     }
-    // Función para mostrar u ocultar el control de saturación
+    // Mostrar u ocultar el control de saturación
     function toggleSaturation() {
       const saturationContainer = document.getElementById('saturation-container');
       saturationContainer.style.display = (saturationContainer.style.display === 'none') ? 'block' : 'none';
+    }
+    // Función para alternar fuentes legibles
+    function toggleLegibleFonts() {
+      document.body.classList.toggle('legible-font');
     }
   </script>
 </body>
