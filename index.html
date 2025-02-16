@@ -141,7 +141,7 @@
 <button onclick="toggleReadingHeight()">Altura de la barra</button>
 <div id="reading-height-container" style="display: none;">
   <label for="reading-height-slider">Altura de la barra:</label>
-  <input type="range" id="reading-height-slider" min="10" max="100" value="40" oninput="adjustReadingBarHeight(this.value)">
+  <input type="range" id="reading-height-slider" min="10" max="100" value="20" oninput="adjustReadingBarHeight(this.value)">
 </div>
       <button onclick="toggleDarkMode()">Modo oscuro</button>
       <button onclick="toggleAnimations()">Detener animaciones</button>
@@ -242,6 +242,10 @@ function updateReadingBarAndOverlays(event) {
   overlayBottom.style.top = (barTop + barHeight) + 'px';
   overlayBottom.style.height = `calc(100% - ${barTop + barHeight}px)`;
 }
+ function toggleReadingHeight() {
+  const container = document.getElementById('reading-height-container');
+  container.style.display = container.style.display === 'none' ? 'block' : 'none';
+}   
 function adjustReadingBarHeight(value) {
   readingBarHeight = parseInt(value);
   const bar = document.getElementById('reading-bar');
