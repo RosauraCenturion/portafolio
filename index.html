@@ -147,6 +147,7 @@
       <button onclick="toggleLegibleFonts()">Fuentes legibles</button>
     </div>
   </div>
+</div>
 
   <div id="reading-bar" class="reading-bar" style="display: none;"></div>
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
@@ -189,22 +190,24 @@
       panelContent.style.display = (panelContent.style.display === 'none') ? 'block' : 'none';
     }
     function toggleReadingBar() {
-    const readingBar = document.getElementById('reading-bar');
-    if (readingBar.style.display === 'none') {
-      readingBar.style.display = 'block';
-      document.body.classList.add('reading-active');
-      document.addEventListener('mousemove', moveReadingBar);
-    } else {
-      readingBar.style.display = 'none';
-      document.body.classList.remove('reading-active');
-      document.removeEventListener('mousemove', moveReadingBar);
+      const readingBar = document.getElementById('reading-bar');
+      const pageContent = document.getElementById('page-content');
+      if (readingBar.style.display === 'none') {
+        readingBar.style.display = 'block';
+        pageContent.classList.add('dimmed');
+        document.addEventListener('mousemove', moveReadingBar);
+      } else {
+        readingBar.style.display = 'none';
+        pageContent.classList.remove('dimmed');
+        document.removeEventListener('mousemove', moveReadingBar);
+      }
     }
-  }
     function moveReadingBar(event) {
       const readingBar = document.getElementById('reading-bar');
       readingBar.style.top = event.clientY + 'px';
       readingBar.style.pointerEvents = 'none';
     }
+    
     function toggleAnimations() {
       const elements = document.querySelectorAll('*');
       elements.forEach(element => {
