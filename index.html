@@ -71,8 +71,8 @@
           <p>Certificación en Desarrollo Web - Sololearn</p>
         </div>
         <div class="certification">
-          <img src="certificacion2.jpg" alt="Certificación en Ingeniero Web en Phython - Bootcamp Desarrollo Joven" class="certificado">
-          <p>Certificación en Ingeniero Web en Phython - Bootcamp Desarrollo Joven</p>
+          <img src="certificacion2.jpg" alt="Certificación en Ingeniero Web en Python - Bootcamp Desarrollo Joven" class="certificado">
+          <p>Certificación en Ingeniero Web en Python - Bootcamp Desarrollo Joven</p>
         </div>
         <div class="certification">
           <img src="certificacion3.jpg" alt="Certificación en HTML - Sololearn" class="certificado">
@@ -155,7 +155,7 @@
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    /*let readingBarActive = false;*/
+    let readingBarActive = false;
     AOS.init();
 
     // Modal para ampliar imágenes de certificaciones
@@ -199,16 +199,16 @@ function toggleReadingBar() {
   const bar = document.getElementById('reading-bar');
   const overlayTop = document.getElementById('dimming-overlay-top');
   const overlayBottom = document.getElementById('dimming-overlay-bottom');
-  
+
   if (!readingBarActive) {
-    // Activamos la barra y los overlays
+    // Activar la máscara: mostrar la barra y los overlays, y añadir el listener
     bar.style.display = 'block';
     overlayTop.style.display = 'block';
     overlayBottom.style.display = 'block';
     document.addEventListener('mousemove', updateReadingBarAndOverlays);
     readingBarActive = true;
   } else {
-    // Desactivamos
+    // Desactivar la máscara: ocultar barra y overlays, y quitar el listener
     bar.style.display = 'none';
     overlayTop.style.display = 'none';
     overlayBottom.style.display = 'none';
@@ -222,10 +222,10 @@ function updateReadingBarAndOverlays(event) {
   const overlayTop = document.getElementById('dimming-overlay-top');
   const overlayBottom = document.getElementById('dimming-overlay-bottom');
   
-  const barHeight = 40; // Debe coincidir con la altura definida en CSS
+  const barHeight = 40; // Debe coincidir con la altura definida en CSS para #reading-bar
   const barTop = event.clientY;
   
-  // Actualizamos la posición de la barra de lectura
+  // Posición de la barra de lectura
   bar.style.top = barTop + 'px';
   
   // El overlay superior cubrirá desde el tope de la ventana hasta el inicio de la barra
