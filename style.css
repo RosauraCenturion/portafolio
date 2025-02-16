@@ -37,7 +37,7 @@ body {
   z-index: 9999;
   pointer-events: none;
   border: solid;
-  filter: brightness(1) !important; /* Forzamos que tenga brillo normal */
+  filter: brightness(2) !important; /* Forzamos que tenga brillo normal */
 }
 
 
