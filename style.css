@@ -7,7 +7,7 @@ body {
 }
 
 body.reading-active {
-  filter: brightness(0.5);
+  filter: brightness(5);
 }
 
 body.reading-active #reading-bar {
