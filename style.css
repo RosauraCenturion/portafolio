@@ -15,13 +15,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px; /* Altura ajustable */
- /* pointer-events: none;  */
-  z-index: 10001; /* Asegura que esté por encima de todo */
+  height: 40px; /* Altura ajustada */
+  background: rgba(255, 255, 255, 0.1); /* Fondo claro para visibilidad */
+  z-index: 10000; /* Asegura que esté al frente */
   mix-blend-mode: difference; /* Anula el filtro oscuro */
-  background: rgba(255, 255, 255, 0.1); /* Leve fondo para contraste */
+  pointer-events: none; /* No interfiere con el contenido */
 }
-
 
 #dimming-overlay {
   position: fixed;
