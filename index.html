@@ -148,7 +148,7 @@
     </div>
   </div>
 </div>
-
+<div id="dimming-overlay" style="display: none;"></div>
   <div id="reading-bar" class="reading-bar" style="display: none;"></div>
 <script src="https://cdn.userway.org/widget.js" data-account="AJAhOezdOv"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -191,14 +191,14 @@
     }
     function toggleReadingBar() {
       const readingBar = document.getElementById('reading-bar');
-      const pageContent = document.getElementById('page-content');
+      const overlay = document.getElementById('dimming-overlay');
       if (readingBar.style.display === 'none') {
         readingBar.style.display = 'block';
-        pageContent.classList.add('dimmed');
+        overlay.style.display = 'block';
         document.addEventListener('mousemove', moveReadingBar);
       } else {
         readingBar.style.display = 'none';
-        pageContent.classList.remove('dimmed');
+        overlay.style.display = 'none';
         document.removeEventListener('mousemove', moveReadingBar);
       }
     }
