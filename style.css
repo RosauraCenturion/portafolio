@@ -308,12 +308,34 @@ footer p {
 }
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
+  /* Header: botones en columna */
   header .container {
     flex-direction: column !important;
     text-align: center !important;
   }
+  
+  nav ul {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 5px 0 !important;
+  }
+  
+  /* Sección "Sobre mí": la foto encima del texto */
   .profile {
     flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .profile img {
+    margin: 0 auto 1rem !important;
+    width: 150px; /* O ajusta si es necesario */
+    height: 150px;
+  }
+  
+  .profile-text {
     text-align: center !important;
   }
 }
