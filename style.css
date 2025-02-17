@@ -312,7 +312,8 @@ footer p {
     flex-direction: column;
     text-align: center;
   }
-/* Media Queries para dispositivos de escritorio */
+}
+
 @media (min-width: 769px) {
   .profile {
     flex-direction: row;
@@ -321,3 +322,4 @@ footer p {
     text-align: left;
   }
 }
+
