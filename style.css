@@ -306,3 +306,9 @@ footer p {
 .dark-mode a {
   color: #bb86fc;
 }
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
