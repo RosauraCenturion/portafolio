@@ -309,10 +309,15 @@ footer p {
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
   header .container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .profile {
+    flex-direction: column !important;
+    text-align: center !important;
   }
 }
+
 
 @media (min-width: 769px) {
   .profile {
